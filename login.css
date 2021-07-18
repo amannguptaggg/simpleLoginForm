@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+
+.loginBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url(./login-back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: optimizeQuality;
+
+
+}
+
+.loginBox::after {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    top: 0px;
+  }
+  
+
+.form-card{
+    position: relative;
+    padding: 40px 30px;
+    margin: 0;
+    width: 100%;
+    max-width: 450px;
+    top: -30px;
+    border: 1px solid #9e9e9e;
+    border-radius: 10px;
+    background-color: rgba(148, 125, 125, 0.1);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    z-index: 100;
+}
+
+.form-card h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.form-card h2{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.form-card input{
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,1);
+    background: transparent;
+    border-radius: 0;
+
+}
+
+.form-card input:focus{
+    border: none;
+    border-bottom: 1px solid rgb(15, 184, 0);
+    background: transparent;
+
+}
+
+.form-card input[type=submit]{
+    background: #00701a;
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 3px;
+}
+
+.form-card input[type=submit]:hover{
+    background: #00227b;
+}
+
+.form-footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.form-footer a{
+color: #387002;
+text-decoration: none;
+}
+
+
+.form-footer p:last-child::before{
+    position: relative;
+    content: "|";
+    padding: 0px 5px;
+    left: 0px;
+}
+
+.form-card span{
+    font-size: 14px;
+    color: red;
+}
+
+@media (max-width:500px) {
+    
+    .form-card {
+        margin: 0 15px;
+    }
+
+    .form-footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-footer p:last-child::before{
+        display: none;
+    }
+}
